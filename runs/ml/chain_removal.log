@@ -1,0 +1,20 @@
+CHAIN REMOVAL -- does the radar processing carry any maneuver information?
+  LAG_MODE=lag  ACTUATOR_LAG_S=1.2  RESAMPLE=causal  aspect=0.80  cue SNR +20 dB
+  full   = cue -> micro_doppler -> spectrogram -> band power -> matched-FPR threshold
+  direct = cue ----------------------------------------------> matched-FPR threshold
+
+quantity                              value
+--------------------------------------------
+paired tracks                            30
+median lead, full chain              +0.400 s
+median lead, chain removed           +0.200 s
+PAIRED median difference             +0.000 s
+tracks bit-identical                    83 %
+difference of medians (unpaired)     +0.200 s
+max |paired difference|              +5.000 s
+Wilcoxon (two-sided) p                0.121
+
+READING: a paired median of 0.000 s with most tracks bit-identical means the entire
+  spectrogram-and-band-power chain is invertible with respect to the decision -- it
+  carries no information the threshold on the cue did not already have. The unpaired
+  difference of medians is a DIFFERENT quantity and is not the claim.

@@ -1,0 +1,74 @@
+{
+ "snr_db": 40.0,
+ "sigma": 0.3,
+ "seeds": 30,
+ "reps": 12,
+ "alts_km": [
+  56.0,
+  40.0,
+  25.0,
+  18.0
+ ],
+ "rows": [
+  {
+   "arming_alt_km": 56.0,
+   "n_seeds": 30,
+   "n_with_event": 0,
+   "n": 0,
+   "adv_median": null,
+   "worst": null,
+   "n_pos": 0,
+   "muD_lead_ms": null,
+   "cusum_lead_ms": null,
+   "budget_ms": null,
+   "mean_g": null,
+   "det": null,
+   "p": null
+  },
+  {
+   "arming_alt_km": 40.0,
+   "n_seeds": 30,
+   "n_with_event": 0,
+   "n": 0,
+   "adv_median": null,
+   "worst": null,
+   "n_pos": 0,
+   "muD_lead_ms": null,
+   "cusum_lead_ms": null,
+   "budget_ms": null,
+   "mean_g": null,
+   "det": null,
+   "p": null
+  },
+  {
+   "arming_alt_km": 25.0,
+   "n_seeds": 30,
+   "n_with_event": 30,
+   "n": 0,
+   "adv_median": null,
+   "worst": null,
+   "n_pos": 0,
+   "muD_lead_ms": null,
+   "cusum_lead_ms": 119.50000000000006,
+   "budget_ms": 350.05000000000007,
+   "mean_g": 10.896155360088805,
+   "det": 0.0,
+   "p": null
+  },
+  {
+   "arming_alt_km": 18.0,
+   "n_seeds": 30,
+   "n_with_event": 30,
+   "n": 0,
+   "adv_median": null,
+   "worst": null,
+   "n_pos": 0,
+   "muD_lead_ms": null,
+   "cusum_lead_ms": 119.54999999999998,
+   "budget_ms": 392.70000000000005,
+   "mean_g": 10.896155360088805,
+   "det": 0.0,
+   "p": null
+  }
+ ]
+}

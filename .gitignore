@@ -1,0 +1,24 @@
+# Build products
+*.aux
+*.log
+# LaTeX build logs are noise, and so is QA output. These five back a claim in the paper.
+!runs/ml/chain_removal.log
+!runs/ml/retired_metrics.log
+!runs/ml/causal_dwell.log
+!runs/ml/fm3_window.log
+!runs/ml/same_channel_null.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+__pycache__/
+*.pyc
+
+# Never commit these: the cited papers are the publishers', not ours.
+sources/
+litpdf/
+litcache.json
+cache/
+
+# Large regenerable outputs
+*.npz.tmp

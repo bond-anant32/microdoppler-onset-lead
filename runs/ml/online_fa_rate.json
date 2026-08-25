@@ -1,0 +1,27 @@
+{
+ "snr_db": 40.0,
+ "sigma": 0.3,
+ "dwell_s": 0.002,
+ "need": 3,
+ "grid_s": 0.001,
+ "cruise_s": 0.6,
+ "guard_s": 0.12,
+ "dur_s": 60.0,
+ "records": 30,
+ "arms": [
+  {
+   "arm": "muD (no-cue null)",
+   "events": 26,
+   "seconds": 1781.969999999999,
+   "rate_per_s": 0.014590593556569423,
+   "mean_time_between_fa_s": 68.53730769230765
+  },
+  {
+   "arm": "CUSUM (quiescent)",
+   "events": 783,
+   "seconds": 1781.969999999999,
+   "rate_per_s": 0.4394013367228407,
+   "mean_time_between_fa_s": 2.2758237547892706
+  }
+ ]
+}

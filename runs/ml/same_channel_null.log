@@ -1,0 +1,15 @@
+FFT bins inside 3-10 Hz vs dwell (bin spacing = 1/T):
+       2 ms  n=4     spacing    500.0 Hz  bins in band = 0
+       5 ms  n=10    spacing    200.0 Hz  bins in band = 0
+      10 ms  n=20    spacing    100.0 Hz  bins in band = 0
+      20 ms  n=40    spacing     50.0 Hz  bins in band = 0
+     100 ms  n=200   spacing     10.0 Hz  bins in band = 1
+     150 ms  n=300   spacing      6.7 Hz  bins in band = 1
+     500 ms  n=1000  spacing      2.0 Hz  bins in band = 4
+
+NULL CONTROL (n=40): does any cell survive no-cue FA <= 5%?
+detector                   SNR    signal det   null det verdict
+bandpower 3-10 (phase)     20          100%        50%  FAILS null FA<=5%
+bandpower 3-10 (phase)     10          100%        50%  FAILS null FA<=5%
+matched (phase)            20          100%         0%  SURVIVES
+matched (phase)            10            0%         0%  FAILS null FA<=5%

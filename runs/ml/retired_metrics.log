@@ -1,0 +1,31 @@
+RETIRED LEAD METRICS -- Sec. IV-2 and IV-3, reproduced on the fin cue
+  25 km / M7.5 / 9.1 g | PRF 2000 Hz | command at t=0 | onset at +35.4 ms
+  dwell 10 ms (matched short-time), n=30 noise realisations per SNR
+
+SNR dB   rule                           median        IQR   scored   failure mode
+--------------------------------------------------------------------------------------------------------
+20       A onset-anchored (0-FA thr)      +2.4      2.4-2.4      2/30    alarm has cleared before onset -> scored as MISS
+20       B sustained run, matched FPR    +220.4    190.2-233.2   30/30    trailing-window samples ~99%% correlated -> runs cheap
+20       C first run > cruise max       +31.4     31.4-32.4    30/30    no independence assumption; the rule used in Sec. VII
+           A miss reasons: {'no-run-at-onset': 27, 'blip': 1}
+           alarm rises +3.5 ms after command, clears +25.5 ms, onset at +35.4 ms
+
+10       A onset-anchored (0-FA thr)       MISS                     0/30    alarm has cleared before onset -> scored as MISS
+10       B sustained run, matched FPR    +212.9    181.2-230.9   30/30    trailing-window samples ~99%% correlated -> runs cheap
+10       C first run > cruise max       +24.4     22.4-30.4    19/30    no independence assumption; the rule used in Sec. VII
+           A miss reasons: {'no-run-at-onset': 30}
+           alarm rises +11.0 ms after command, clears +15.3 ms, onset at +35.4 ms
+
+0        A onset-anchored (0-FA thr)      +1.4      1.4-1.4      1/30    alarm has cleared before onset -> scored as MISS
+0        B sustained run, matched FPR    +208.4    181.7-236.2   30/30    trailing-window samples ~99%% correlated -> runs cheap
+0        C first run > cruise max       +12.4      1.4-74.4     9/30    no independence assumption; the rule used in Sec. VII
+           A miss reasons: {'no-run-at-onset': 29}
+           alarm rises +60.0 ms after command, clears +60.5 ms, onset at +35.4 ms
+
+READING (this is Sections IV-2 and IV-3 of the manuscript, reproduced):
+  A returns MISS on a genuinely early alarm, because the onset-anchored rule presumes the
+    alarm is still raised at t_onset and a fin transient has already cleared by then.
+  B returns a large POSITIVE lead on the same data, because a per-sample FPR does not
+    control the alarm-event rate of a trailing-window statistic.
+  The two fail in OPPOSITE directions on identical inputs, so the metric choice alone
+  spans more than the effect being estimated. C needs no independence assumption.
