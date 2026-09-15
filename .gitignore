@@ -1,0 +1,19 @@
+# Build products
+*.aux
+*.log
+!runs/ml/*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+__pycache__/
+*.pyc
+
+# Third-party material
+sources/
+litpdf/
+litcache.json
+cache/
+
+# Temporary outputs
+*.npz.tmp

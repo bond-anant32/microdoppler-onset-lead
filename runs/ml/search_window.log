@@ -1,0 +1,25 @@
+﻿Search-window sweep: reported lead against search-window start
+  25 km / M7.5 / 9.1 g | onset +35.4 ms after command | matched short-time, 10 ms dwell
+  cruise window pinned to [t_on-0.95, t_on-0.55], clear of every search window below
+
+               | RULE B: matched per-sample FPR     | RULE C: cruise maximum            
+  search_pre   |  median lead          n   pre-cmd |   muD lead   kin lead   ADVANTAGE
+  ----------------------------------------------------------------------------------------
+  0.12         |        +76.9         30       77% |      +31.4      +25.4        +6.0
+  0.15         |       +101.4         30       83% |      +31.4      +25.4        +6.0
+  0.20         |       +165.4         30       93% |      +31.4      +25.4        +6.0
+  0.25         |       +211.4         30       97% |      +31.4      +25.4        +6.0
+  0.30         |       +267.9         30      100% |      +31.4      +25.4        +6.0
+  0.40         |       +357.4         30      100% |      +31.4      +25.4        +6.0
+  0.50         |       +459.4         30      100% |      +31.4      +25.4        +6.0
+
+  RULE B: lead = 1.008 * search_pre -42.1 ms   (r2 = 0.9984, max resid 7.7 ms)
+  RULE C: advantage = 0.0000 * search_pre +6.00 ms   (spread 0.0 ms over a 4.2x range)
+
+Interpretation. With a slope of 1, rule B's lead follows the search window and has no fixed
+  point, and 77-100% of the alarms it credits precede the command that causes the
+  maneuver and are therefore physically impossible. The event being
+  measured lasts 35.4 ms. Rule C is exactly flat over the same range: under a
+  zero-false-alarm threshold the search-window start does not change the lead.
+  (Removing the 130 ms threshold/search overlap moves
+   rule B only +220.4 -> +213.9 ms.)

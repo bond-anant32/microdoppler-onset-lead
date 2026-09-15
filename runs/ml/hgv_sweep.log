@@ -1,0 +1,39 @@
+HGV DETECTOR SWEEP -- four statistics at dwells from 2 ms to 5 s
+
+  Every arm: rendered from delta(t), causal, cruise-maximum threshold, no-cue null.
+  A cell only counts if detection beats its own null.
+
+  6 trajectories | median weave period 146.0 s (0.0068 Hz) | reversal amplitude 6.82 g
+
+  statistic          dwell     det      FA median lead
+  --------------------------------------------------------
+  matched               2ms      7%      7%      -193.8
+  matched              10ms     48%     55%        +0.1
+  matched              50ms     58%     58%        +9.1
+  matched             200ms     38%     38%       +47.1
+  matched            1000ms     48%     48%       +91.1
+  matched            5000ms    100%    100%      +119.3
+  band@weave            2ms      --      --  unformable
+  band@weave           10ms      --      --  unformable
+  band@weave           50ms      --      --  unformable
+  band@weave          200ms      --      --  unformable
+  band@weave         1000ms      --      --  unformable
+  band@weave         5000ms      --      --  unformable
+  band 3-10Hz           2ms      --      --  unformable
+  band 3-10Hz          10ms      --      --  unformable
+  band 3-10Hz          50ms      --      --  unformable
+  band 3-10Hz         200ms     57%     58%        +5.2
+  band 3-10Hz        1000ms     62%     65%       +13.3
+  band 3-10Hz        5000ms      0%      0%          --
+  cadence               2ms     10%     13%      -118.0
+  cadence              10ms     35%     33%       -71.9
+  cadence              50ms     52%     55%       -29.7
+  cadence             200ms     40%     43%       -72.4
+  cadence            1000ms     30%     35%       +17.7
+  cadence            5000ms      0%      0%          --
+
+  Cells that convert (det >= 50%, no-cue FA <= 5%, positive lead): 0 of 15
+    none. No statistic converts at any dwell from 2 ms to 5 s, each cell scored
+    against its own no-cue null.
+
+  wrote runs/ml/hgv_sweep.json

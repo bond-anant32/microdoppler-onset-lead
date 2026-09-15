@@ -1,0 +1,23 @@
+{
+ "col0": {
+  "label": "shared rule",
+  "n": 30,
+  "median": 17.000000000000014,
+  "min": 11.00000000000001,
+  "all_positive": true
+ },
+ "col1": {
+  "label": "$10^{-1}$/s",
+  "n": 30,
+  "median": 25.00000000000002,
+  "min": 11.50000000000001,
+  "all_positive": true
+ },
+ "col2": {
+  "label": "$10^{-2}$/s",
+  "n": 29,
+  "median": 28.000000000000025,
+  "min": 13.00000000000001,
+  "all_positive": true
+ }
+}
